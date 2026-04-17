@@ -1,0 +1,111 @@
+{
+  "headache": {
+    "real_world_evidence": [
+      "Most acute headaches in primary care are tension or migraine related",
+      "Red flags include neurologic deficits, thunderclap onset, fever, and age >50 with new headache"
+    ],
+    "medical_issues": [
+      "Check blood pressure and neurologic exam",
+      "Rule out secondary causes when red flags are present"
+    ],
+    "guidelines": [
+      "Use a headache red-flag framework before symptomatic treatment",
+      "Avoid unnecessary imaging when no neurologic warning signs"
+    ],
+    "references": [
+      "NICE Clinical Knowledge Summaries: Headache",
+      "https://cks.nice.org.uk/topics/headache",
+      "AAN headache quality measures"
+    ]
+  },
+  "fever": {
+    "real_world_evidence": [
+      "In ambulatory care, most fevers are viral and self-limited",
+      "Duration, localizing symptoms, and host risk factors improve triage"
+    ],
+    "medical_issues": [
+      "Assess for sepsis criteria and immunocompromise",
+      "Confirm hydration status and hemodynamic stability"
+    ],
+    "guidelines": [
+      "Escalate care when systemic instability or persistent high fever is present",
+      "Use local infectious disease guidance for testing"
+    ],
+    "references": [
+      "CDC Fever guidance",
+      "https://www.cdc.gov",
+      "Surviving Sepsis Campaign"
+    ]
+  },
+  "cough": {
+    "real_world_evidence": [
+      "Acute cough is commonly viral and resolves within 3 weeks",
+      "Smoking history and chronicity help stratify risk"
+    ],
+    "medical_issues": [
+      "Screen for hypoxia, dyspnea, and hemoptysis",
+      "Review asthma/COPD history and inhaler use"
+    ],
+    "guidelines": [
+      "Avoid routine antibiotics in uncomplicated viral cough",
+      "Use chest imaging when pneumonia is suspected"
+    ],
+    "references": [
+      "NICE Cough (acute): antimicrobial prescribing",
+      "https://www.nice.org.uk/guidance/ng120",
+      "IDSA respiratory infection guidance"
+    ]
+  },
+  "shortness of breath": {
+    "real_world_evidence": [
+      "Dyspnea is a high-risk symptom requiring prompt severity assessment",
+      "Pulse oximetry and work of breathing correlate with deterioration risk"
+    ],
+    "medical_issues": [
+      "Evaluate oxygenation, airway, and circulation first",
+      "Consider pulmonary embolism, heart failure, asthma/COPD, and infection"
+    ],
+    "guidelines": [
+      "Immediate escalation for severe distress or low oxygen saturation",
+      "Use condition-specific pathways once stabilized"
+    ],
+    "references": [
+      "American Thoracic Society resources",
+      "https://www.thoracic.org",
+      "NICE breathlessness guidance"
+    ]
+  },
+  "chest pain": {
+    "real_world_evidence": [
+      "Chest pain requires urgent exclusion of acute coronary syndrome",
+      "Risk stratification tools improve disposition safety"
+    ],
+    "medical_issues": [
+      "Obtain ECG and assess hemodynamics",
+      "Consider pulmonary, gastrointestinal, and musculoskeletal differentials"
+    ],
+    "guidelines": [
+      "Emergency pathway when ACS cannot be ruled out",
+      "Follow institutional chest pain protocol"
+    ],
+    "references": [
+      "AHA/ACC chest pain guideline",
+      "https://www.ahajournals.org"
+    ]
+  },
+  "default": {
+    "real_world_evidence": [
+      "Use complete history and examination to contextualize symptoms"
+    ],
+    "medical_issues": [
+      "Check for red flags and drug contraindications"
+    ],
+    "guidelines": [
+      "Follow local and specialty society guidance"
+    ],
+    "references": [
+      "WHO clinical resources",
+      "https://www.who.int"
+    ]
+  }
+}
