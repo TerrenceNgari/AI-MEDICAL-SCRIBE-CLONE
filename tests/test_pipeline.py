@@ -11,6 +11,7 @@ if str(SRC) not in sys.path:
     sys.path.insert(0, str(SRC))
 
 from medical_scribe.analyzer import analyze_visit
+from medical_scribe.report import build_report_pdf
 from medical_scribe.support import SupportEngine
 
 
@@ -58,3 +59,11 @@ def test_negated_symptom_not_selected_as_chief_complaint():
 
     assert analysis.chief_complaint != "chest pain"
     assert analysis.chief_complaint in {"headache", "fever"}
+
+
+def test_build_report_pdf_returns_pdf_bytes():
+    sample_markdown = "# Medical Scribe Report\n\n## Transcript\nPatient reports cough.\n"
+    pdf_bytes = build_report_pdf(sample_markdown)
+
+    assert isinstance(pdf_bytes, bytes)
+    assert pdf_bytes.startswith(b"%PDF")

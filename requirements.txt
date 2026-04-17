@@ -3,3 +3,4 @@ SpeechRecognition==3.10.4
 sounddevice==0.5.1
 soundfile==0.12.1
 streamlit==1.44.1
+fpdf2==2.8.2

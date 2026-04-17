@@ -14,7 +14,7 @@ from medical_scribe.analyzer import analyze_visit
 from medical_scribe.display import render_screen
 from medical_scribe.emailer import send_email_report
 from medical_scribe.recorder import record_audio
-from medical_scribe.report import build_report_markdown, save_report
+from medical_scribe.report import build_report_markdown, build_report_pdf, save_pdf_report, save_report
 from medical_scribe.support import SupportEngine
 from medical_scribe.transcriber import transcribe
 
@@ -56,8 +56,11 @@ def main() -> int:
     print(screen_output)
 
     report_content = build_report_markdown(args.patient_id, analysis, support)
+    report_pdf = build_report_pdf(report_content)
     report_path = save_report(report_content)
+    report_pdf_path = save_pdf_report(report_pdf)
     print(f"Report saved: {report_path}")
+    print(f"PDF report saved: {report_pdf_path}")
 
     if args.send_email:
         send_email_report(

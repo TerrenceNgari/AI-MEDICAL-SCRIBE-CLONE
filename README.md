@@ -58,12 +58,26 @@ Then open the local Streamlit URL shown in terminal.
 
 UI supports:
 
+- Account signup/login using email + password
 - Typed text input
 - Upload `.wav`, `.aiff`, `.flac`, or `.txt`
 - Browser microphone recording (if supported by installed Streamlit version)
 - On-screen SOAP + decision support areas + references
-- Download report as markdown
+- Download report as markdown or PDF
+- Automatic save of generated patient transcript + report content into a database
+- Frontend database viewer to inspect saved patient records
 - Optional email send via SMTP environment variables
+
+Authentication details:
+
+- Accounts are stored in a local SQLite database at `data/users.db`
+- Passwords are stored as salted PBKDF2-SHA256 hashes (not plaintext)
+
+Clinical records details:
+
+- Generated patient reports are stored in `data/clinical_records.db`
+- Records include patient ID, source mode, transcript, chief complaint, SOAP note,
+  support sections, references, and report markdown
 
 ### 3. Run with an audio file
 
