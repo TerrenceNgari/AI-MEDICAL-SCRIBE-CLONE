@@ -34,9 +34,10 @@ It includes:
 
 ## Quick Start
 
-### 1. Create environment
+### 1. Open the project root and create environment
 
 ```bash
+cd /workspaces/AI-MEDICAL-SCRIBE-CLONE
 python -m venv .venv
 source .venv/bin/activate
 pip install -r requirements.txt
@@ -46,6 +47,26 @@ pip install -r requirements.txt
 
 ```bash
 python main.py --text "Patient reports headache and fever for 2 days, no chest pain, blood pressure 145/95, likely viral syndrome" --patient-id P-001
+```
+
+### 3. Other common run commands
+
+Run the web app:
+
+```bash
+streamlit run streamlit_app.py
+```
+
+Run with an audio file:
+
+```bash
+python main.py --audio-file sample.wav --patient-id P-002
+```
+
+Record from microphone for 10 seconds:
+
+```bash
+python main.py --record-seconds 10 --patient-id P-003
 ```
 
 ## Run Website UI
@@ -79,19 +100,19 @@ Clinical records details:
 - Records include patient ID, source mode, transcript, chief complaint, SOAP note,
   support sections, references, and report markdown
 
-### 3. Run with an audio file
+### 4. Run with an audio file
 
 ```bash
 python main.py --audio-file sample.wav --patient-id P-002
 ```
 
-### 4. Record from microphone for N seconds
+### 5. Record from microphone for N seconds
 
 ```bash
 python main.py --record-seconds 10 --patient-id P-003
 ```
 
-### 5. Send output by email
+### 6. Send output by email
 
 Set SMTP environment variables:
 
