@@ -114,7 +114,15 @@ python main.py --record-seconds 10 --patient-id P-003
 
 ### 6. Send output by email
 
-Set SMTP environment variables:
+Option A: create a `.env` file in the project root (recommended):
+
+```bash
+cp .env.example .env
+```
+
+Then update `.env` with your real credentials.
+
+Option B: set SMTP environment variables manually in your shell:
 
 ```bash
 export SMTP_HOST=smtp.gmail.com
@@ -129,6 +137,11 @@ Then run:
 ```bash
 python main.py --text "Patient has cough, wheeze, and shortness of breath" --send-email doctor@example.com
 ```
+
+Notes:
+
+- For Gmail, use an App Password for `SMTP_PASSWORD`.
+- If using `.env`, values are loaded automatically by the email module.
 
 Reports are saved to `outputs/`.
 
